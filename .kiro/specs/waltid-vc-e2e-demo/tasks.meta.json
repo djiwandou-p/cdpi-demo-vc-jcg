@@ -1,0 +1,192 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create the repository skeleton": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416314512
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416327948
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416654204
+      }
+    ],
+    "1.2 Initialize the wallet TypeScript/Node project": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416314736
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416661345
+      }
+    ],
+    "2.1 Author the Issuer Education Certificate profile and did:key": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416315082
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416328860
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416655098
+      }
+    ],
+    "2.2 Author the Verifier presentation definition and policies": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416315345
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416329917
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416656043
+      }
+    ],
+    "3.1 Write docker-compose.yml with pinned, mem-limited services": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416315582
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416661983
+      }
+    ],
+    "4.1 Implement the offerIntake module": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416315802
+      }
+    ],
+    "4.4 Implement the sessionStore module": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416316107
+      }
+    ],
+    "5.1 Implement the holderKeys module": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416316367
+      }
+    ],
+    "5.2 Implement the oid4vciClient module": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416316652
+      }
+    ],
+    "6. Checkpoint - Ensure intake, storage, keys, and issuance client tests pass": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416316895
+      }
+    ],
+    "7.1 Implement the disclosureSelector module": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416317100
+      }
+    ],
+    "7.3 Implement the oid4vpClient module": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416317294
+      }
+    ],
+    "8.1 Implement the httpApi module and server entrypoint": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416317483
+      }
+    ],
+    "9.1 Implement the web UI under services/wallet/public": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416317700
+      }
+    ],
+    "10.1 Write the wallet Dockerfile": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416317900
+      }
+    ],
+    "11. Checkpoint - Ensure wallet build and all wallet tests pass": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416318140
+      }
+    ],
+    "12.1 Write the full-flow integration driver": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416318376
+      }
+    ],
+    "13.1 Write .github/workflows/ci.yml": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416318606
+      }
+    ],
+    "14.1 Author README.md and docs/quickstart.md": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416318921
+      }
+    ],
+    "15. Final checkpoint - Ensure the full stack and all tests pass": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416319160
+      }
+    ],
+    "2. Configure the pre-built issuer and verifier services": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791416656169
+      }
+    ]
+  }
+}

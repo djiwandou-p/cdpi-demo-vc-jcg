@@ -1,0 +1,55 @@
+# docker-compose.yml — walt.id VC end-to-end demo (Req 5)
+#
+# Three services on the shared `cdpi-net` bridge network:
+#   - issuer   : pre-built waltid/issuer-api2  (OpenID4VCI 1.0, JVM)  :7005
+#   - verifier : pre-built waltid/verifier-api2 (OpenID4VP 1.0, JVM)  :7004
+#   - wallet   : custom TS/Node BFF + web UI (Holder)                 :3000
+#
+# walt.id images are pinned to the explicit published release tag 1.1.1
+# (latest stable release on Docker Hub; NO `latest`/floating tags) — Req 5.2.
+# Memory limits sit in the ADR-mandated 512 MB–1 GB band — Req 5.3.
+
+services:
+  issuer:
+    image: waltid/issuer-api2:1.1.1
+    ports:
+      - "7005:7005"
+    mem_limit: 1g
+    volumes:
+      - ./services/issuer/config:/waltid-issuer-api2/config:ro
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:7005/swagger"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  verifier:
+    image: waltid/verifier-api2:1.1.1
+    ports:
+      - "7004:7004"
+    mem_limit: 1g
+    volumes:
+      - ./services/verifier/config:/waltid-verifier-api2/config:ro
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:7004/swagger"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  wallet:
+    build: ./services/wallet
+    ports:
+      - "3000:3000"
+    mem_limit: 512m
+    environment:
+      - ISSUER_BASE_URL=http://issuer:7005
+      - VERIFIER_BASE_URL=http://verifier:7004
+    depends_on:
+      issuer:
+        condition: service_healthy
+      verifier:
+        condition: service_healthy
+
+networks:
+  default:
+    name: cdpi-net

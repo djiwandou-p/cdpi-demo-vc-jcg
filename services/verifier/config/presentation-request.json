@@ -1,0 +1,60 @@
+{
+  "$comment": [
+    "Verifier2 (waltid/verifier-api2) OpenID4VP 1.0 verification-session request.",
+    "POST this body to http://localhost:7004/verification-session/create to start a verification.",
+    "It requests an Education Certificate (SD-JWT VC) and asks the wallet to disclose ONLY",
+    "the 'degree' and 'institution' claims (selective disclosure; 'grades' and 'name' are NOT requested).",
+    "Validates: Requirements 4.1 (request names degree + institution), 4.2 (issuer signature /",
+    "did:key resolution), 4.3 (disclosed degree + institution present and verifiable)."
+  ],
+  "flow_type": "cross_device",
+  "core_flow": {
+    "dcql_query": {
+      "credentials": [
+        {
+          "id": "education_certificate",
+          "format": "dc+sd-jwt",
+          "meta": {
+            "vct_values": [
+              "EducationCertificate"
+            ]
+          },
+          "require_cryptographic_holder_binding": true,
+          "claims": [
+            {
+              "path": [
+                "degree"
+              ]
+            },
+            {
+              "path": [
+                "institution"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "policies": {
+      "vc_policies": [
+        {
+          "policy": "signature"
+        }
+      ],
+      "vp_policies": [
+        {
+          "policy": "dc+sd-jwt/kb-jwt_signature"
+        },
+        {
+          "policy": "dc+sd-jwt/sd_hash-check"
+        },
+        {
+          "policy": "dc+sd-jwt/nonce-check"
+        },
+        {
+          "policy": "dc+sd-jwt/audience-check"
+        }
+      ]
+    }
+  }
+}

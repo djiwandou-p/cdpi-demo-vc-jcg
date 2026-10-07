@@ -1,0 +1,30 @@
+{
+  "name": "@cdpi/waltid-vc-wallet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal web wallet (Holder) BFF for the walt.id VC end-to-end demo.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node dist/server.js",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "express": "5.2.1",
+    "waltid-sd-jwt": "1.2311200231.0"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.3",
+    "@types/node": "20.19.9",
+    "eslint": "9.37.0",
+    "fast-check": "3.23.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.38.0",
+    "vitest": "3.2.4"
+  }
+}
