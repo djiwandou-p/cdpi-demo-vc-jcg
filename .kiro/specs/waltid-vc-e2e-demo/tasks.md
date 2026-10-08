@@ -114,7 +114,7 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - _Requirements: 4.5_
 
 - [ ] 8. Implement the wallet BFF HTTP API
-  - [~] 8.1 Implement the httpApi module and server entrypoint
+  - [-] 8.1 Implement the httpApi module and server entrypoint
     - Create `services/wallet/src/httpApi.ts` (and a server entrypoint) exposing: `POST /wallet/offer` (run OpenID4VCI, store, confirm), `GET /wallet/credential` (redacted stored-credential summary), `POST /wallet/present` (apply selective disclosure, submit `vp_token`, return verifier result), `GET /healthz` (liveness).
     - Wire `offerIntake`, `oid4vciClient`, `holderKeys`, `sessionStore`, `disclosureSelector`, `oid4vpClient` together; wrap each handler stage with its step name so failures identify the failing step.
     - Read `ISSUER_BASE_URL` / `VERIFIER_BASE_URL` from the environment.
