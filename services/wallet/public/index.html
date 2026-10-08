@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>walt.id VC Demo Wallet</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+      Thin wallet web UI (design: Components -> Wallet Service -> Web UI).
+      It talks ONLY to the same-origin wallet BFF:
+        POST /wallet/offer      - run OpenID4VCI, store credential
+        GET  /wallet/credential - redacted stored-credential summary
+        POST /wallet/present    - selective-disclosure presentation
+      Paste is the always-working path; QR scan is a progressive enhancement
+      that feeds the very same textarea/flow and degrades gracefully.
+    -->
+    <header class="site-header">
+      <h1>walt.id Verifiable Credential Demo</h1>
+      <p class="tagline">
+        Issue &rarr; store &rarr; present an Education Certificate with selective disclosure.
+      </p>
+    </header>
+
+    <main>
+      <!-- ============================================================= -->
+      <!-- Section 1: Hold a credential (offer intake + confirmation)    -->
+      <!-- ============================================================= -->
+      <section class="card" aria-labelledby="hold-heading">
+        <h2 id="hold-heading">1. Hold a credential</h2>
+        <p class="hint">
+          Paste a credential offer (an <code>openid-credential-offer://</code> URI
+          or offer JSON), or scan a QR code. Then accept the offer to run the
+          OpenID4VCI exchange and store the credential.
+        </p>
+
+        <form id="offer-form" novalidate>
+          <label for="offer-input">Credential offer</label>
+          <textarea
+            id="offer-input"
+            name="offer"
+            rows="5"
+            placeholder="openid-credential-offer://?credential_offer=... or {&quot;credential_issuer&quot;: ...}"
+            aria-describedby="offer-help"
+          ></textarea>
+          <p id="offer-help" class="field-help">
+            Paste the offer string, or use &ldquo;Scan QR&rdquo; to decode it from a camera or image.
+          </p>
+
+          <div class="actions">
+            <button type="submit" id="accept-offer-btn">Accept offer</button>
+            <button type="button" id="offer-scan-btn" class="secondary">Scan QR</button>
+            <!-- Hidden file input used for the image-decode fallback. -->
+            <input
+              type="file"
+              id="offer-scan-file"
+              accept="image/*"
+              capture="environment"
+              class="visually-hidden"
+              aria-label="Choose a QR code image for the credential offer"
+            />
+          </div>
+        </form>
+
+        <!-- Status / error line for the offer action (announced to AT). -->
+        <p id="offer-status" class="status" role="status" aria-live="polite"></p>
+
+        <!-- Stored-credential confirmation panel (Req 2.3). Hidden until a
+             credential is confirmed via GET /wallet/credential. On an invalid
+             offer this panel is left UNCHANGED (Req 2.5). -->
+        <div
+          id="credential-panel"
+          class="panel"
+          hidden
+          aria-labelledby="credential-panel-heading"
+        >
+          <h3 id="credential-panel-heading">Stored credential</h3>
+          <dl class="kv">
+            <dt>Status</dt>
+            <dd><span class="badge badge-ok">stored</span></dd>
+            <dt>Type (vct)</dt>
+            <dd id="credential-vct">&mdash;</dd>
+            <dt>Format</dt>
+            <dd id="credential-format">&mdash;</dd>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- Section 2: Present a credential (request intake + result)     -->
+      <!-- ============================================================= -->
+      <section class="card" aria-labelledby="present-heading">
+        <h2 id="present-heading">2. Present a credential</h2>
+        <p class="hint">
+          Paste a presentation request (an <code>openid4vp://</code> URI or request
+          JSON), or scan a QR code. The wallet reveals only <strong>degree</strong>
+          and <strong>institution</strong> and withholds <strong>grades</strong>.
+        </p>
+
+        <form id="present-form" novalidate>
+          <label for="present-input">Presentation request</label>
+          <textarea
+            id="present-input"
+            name="request"
+            rows="5"
+            placeholder="openid4vp://authorize?nonce=... or {&quot;presentation_definition&quot;: ...}"
+            aria-describedby="present-help"
+          ></textarea>
+          <p id="present-help" class="field-help">
+            Paste the request string, or use &ldquo;Scan QR&rdquo; to decode it from a camera or image.
+          </p>
+
+          <div class="actions">
+            <button type="submit" id="present-btn">Present</button>
+            <button type="button" id="present-scan-btn" class="secondary">Scan QR</button>
+            <input
+              type="file"
+              id="present-scan-file"
+              accept="image/*"
+              capture="environment"
+              class="visually-hidden"
+              aria-label="Choose a QR code image for the presentation request"
+            />
+          </div>
+        </form>
+
+        <!-- Status / error line for the present action. -->
+        <p id="present-status" class="status" role="status" aria-live="polite"></p>
+
+        <!-- Verification-result panel. Hidden until a presentation completes. -->
+        <div
+          id="result-panel"
+          class="panel"
+          hidden
+          aria-labelledby="result-panel-heading"
+          aria-live="polite"
+        >
+          <h3 id="result-panel-heading">Verification result</h3>
+          <p id="result-summary"></p>
+          <div id="result-claims-wrap" hidden>
+            <h4>Disclosed claims</h4>
+            <dl id="result-claims" class="kv"></dl>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Demo UI &mdash; talks only to the local wallet backend. No data leaves this origin.</p>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

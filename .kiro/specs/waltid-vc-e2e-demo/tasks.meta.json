@@ -210,6 +210,11 @@
         "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791427472661
+      },
+      {
+        "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791428112691
       }
     ],
     "9.1 Implement the web UI under services/wallet/public": [
@@ -217,6 +222,11 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416317700
+      },
+      {
+        "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791428119643
       }
     ],
     "10.1 Write the wallet Dockerfile": [
@@ -224,6 +234,11 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416317900
+      },
+      {
+        "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791428120552
       }
     ],
     "11. Checkpoint - Ensure wallet build and all wallet tests pass": [
@@ -301,6 +316,13 @@
         "executionId": "da384101-e969-4aa0-bf7f-23fa3f8fac5f",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791427169758
+      }
+    ],
+    "8. Implement the wallet BFF HTTP API": [
+      {
+        "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791428113174
       }
     ]
   }

@@ -113,8 +113,8 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Assert a verifier signature-validation failure surfaces as a failed result naming the validation error/step.
     - _Requirements: 4.5_
 
-- [ ] 8. Implement the wallet BFF HTTP API
-  - [-] 8.1 Implement the httpApi module and server entrypoint
+- [x] 8. Implement the wallet BFF HTTP API
+  - [x] 8.1 Implement the httpApi module and server entrypoint
     - Create `services/wallet/src/httpApi.ts` (and a server entrypoint) exposing: `POST /wallet/offer` (run OpenID4VCI, store, confirm), `GET /wallet/credential` (redacted stored-credential summary), `POST /wallet/present` (apply selective disclosure, submit `vp_token`, return verifier result), `GET /healthz` (liveness).
     - Wire `offerIntake`, `oid4vciClient`, `holderKeys`, `sessionStore`, `disclosureSelector`, `oid4vpClient` together; wrap each handler stage with its step name so failures identify the failing step.
     - Read `ISSUER_BASE_URL` / `VERIFIER_BASE_URL` from the environment.
@@ -125,7 +125,7 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - _Requirements: 2.3, 6.3_
 
 - [ ] 9. Build the thin wallet web UI
-  - [~] 9.1 Implement the web UI under services/wallet/public
+  - [-] 9.1 Implement the web UI under services/wallet/public
     - Offer intake by paste (textarea) and scan (QR via camera/image → decoded string), an "Accept offer" action, and a stored-credential confirmation panel driven by `GET /wallet/credential`.
     - Presentation-request intake (paste/scan), a "Present" action, and a verification-result display.
     - Show the invalid-offer error from `offerIntake` without changing stored state.
@@ -133,7 +133,7 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - _Requirements: 2.3, 2.4, 2.5_
 
 - [ ] 10. Containerize the wallet
-  - [~] 10.1 Write the wallet Dockerfile
+  - [-] 10.1 Write the wallet Dockerfile
     - Create `services/wallet/Dockerfile` (Node base) that installs deps, builds TypeScript, serves the BFF + static UI on port 3000, and exposes `/healthz` for the Compose health check.
     - Add `services/wallet/README.md` noting build/run.
     - _Requirements: 5.4, 5.5_

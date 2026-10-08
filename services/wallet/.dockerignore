@@ -1,0 +1,29 @@
+# Keep the Docker build context small and reproducible. Everything the image
+# needs is produced inside the builder stage (dist/) or copied explicitly
+# (src/, public/, package.json, tsconfig.json).
+
+# Dependencies & build output — reinstalled/recompiled inside the image.
+node_modules
+dist
+
+# Tests & test config — not needed at runtime.
+tests
+vitest.config.ts
+*.test.ts
+
+# Lint config — not needed in the image.
+eslint.config.js
+tsconfig.eslint.json
+
+# Docs & VCS noise.
+README.md
+.git
+.gitignore
+.dockerignore
+Dockerfile
+
+# Editor / OS cruft.
+.vscode
+.DS_Store
+*.log
+npm-debug.log*
