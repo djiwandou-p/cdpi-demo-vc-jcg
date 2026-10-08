@@ -43,7 +43,7 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Inject `ISSUER_BASE_URL=http://issuer:7005` and `VERIFIER_BASE_URL=http://verifier:7004` into the wallet.
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
-  - [ ]* 3.2 Write a config lint/smoke test for the Compose file
+  - [-]* 3.2 Write a config lint/smoke test for the Compose file
     - Assert all three services are present, walt.id image tags are pinned (not `latest`), each service has a memory limit in the 512 MB–1 GB band, and the required host port mappings exist.
     - _Requirements: 5.1, 5.2, 5.3, 5.5_
 
@@ -53,11 +53,11 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Treat paste and scan inputs through one normalization path so they produce identical results.
     - _Requirements: 2.4, 2.5_
 
-  - [ ]* 4.2 Write property test for paste/scan equivalence
+  - [-]* 4.2 Write property test for paste/scan equivalence
     - **Property 4: Paste and scan intake are equivalent**
     - **Validates: Requirements 2.4**
 
-  - [ ]* 4.3 Write property test for rejecting unparseable offers
+  - [-]* 4.3 Write property test for rejecting unparseable offers
     - **Property 5: Unparseable offers are rejected** (reject, surface invalid-offer error, leave stored state unchanged)
     - **Validates: Requirements 2.5**
 
@@ -65,7 +65,7 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Create `services/wallet/src/sessionStore.ts`: in-memory, session-scoped storage of the raw SD-JWT VC keyed by session id (`StoredCredential`); no persistence beyond the session; provide store and retrieve operations.
     - _Requirements: 2.2_
 
-  - [ ]* 4.5 Write property test for credential storage round-trip
+  - [-]* 4.5 Write property test for credential storage round-trip
     - **Property 2: Credential storage round-trip** (retrieve returns an SD-JWT VC equal to the one stored)
     - **Validates: Requirements 2.2**
 
@@ -80,11 +80,11 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Map issuer OpenID4VCI error responses (e.g. unsupported credential type) to a failure tagged with the `token`/`credential` step.
     - _Requirements: 2.1, 1.3, 1.5_
 
-  - [ ]* 5.3 Write property test for the four-attribute claim set
+  - [-]* 5.3 Write property test for the four-attribute claim set
     - **Property 1: Education Certificate carries all four attributes** (assembled claim set contains name, degree, institution, grades)
     - **Validates: Requirements 1.3**
 
-  - [ ]* 5.4 Write unit test for unsupported-credential-type error mapping
+  - [-]* 5.4 Write unit test for unsupported-credential-type error mapping
     - Assert an issuer OpenID4VCI error response surfaces as a failure naming the failing step.
     - _Requirements: 1.5_
 

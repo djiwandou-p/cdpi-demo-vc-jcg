@@ -424,6 +424,48 @@
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791501316905
       }
+    ],
+    "3.2 Write a config lint/smoke test for the Compose file": [
+      {
+        "executionId": "021f9d68-c4e9-4c67-94a4-80801a5721aa",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791501585478
+      }
+    ],
+    "4.2 Write property test for paste/scan equivalence": [
+      {
+        "executionId": "021f9d68-c4e9-4c67-94a4-80801a5721aa",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791501586850
+      }
+    ],
+    "4.3 Write property test for rejecting unparseable offers": [
+      {
+        "executionId": "021f9d68-c4e9-4c67-94a4-80801a5721aa",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791501587850
+      }
+    ],
+    "4.5 Write property test for credential storage round-trip": [
+      {
+        "executionId": "021f9d68-c4e9-4c67-94a4-80801a5721aa",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791501589202
+      }
+    ],
+    "5.3 Write property test for the four-attribute claim set": [
+      {
+        "executionId": "021f9d68-c4e9-4c67-94a4-80801a5721aa",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791501590164
+      }
+    ],
+    "5.4 Write unit test for unsupported-credential-type error mapping": [
+      {
+        "executionId": "021f9d68-c4e9-4c67-94a4-80801a5721aa",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791501591313
+      }
     ]
   }
 }
