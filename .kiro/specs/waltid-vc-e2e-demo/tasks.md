@@ -91,8 +91,8 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
 - [x] 6. Checkpoint - Ensure intake, storage, keys, and issuance client tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 7. Implement selective disclosure and the OpenID4VP client
-  - [-] 7.1 Implement the disclosureSelector module
+- [x] 7. Implement selective disclosure and the OpenID4VP client
+  - [x] 7.1 Implement the disclosureSelector module
     - Create `services/wallet/src/disclosureSelector.ts`: given a stored Education Certificate SD-JWT VC and a `PresentationRequest`, select the disclosures to reveal (`degree`, `institution`) and drop the rest (`grades`).
     - _Requirements: 3.2, 3.3_
 
@@ -100,7 +100,7 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - **Property 3: Selective disclosure reveals degree and institution and withholds grades**
     - **Validates: Requirements 3.2, 3.3**
 
-  - [-] 7.3 Implement the oid4vpClient module
+  - [x] 7.3 Implement the oid4vpClient module
     - Create `services/wallet/src/oid4vpClient.ts`: build the SD-JWT VP + key-binding JWT bound to the request `nonce`, and post the authorization response (`vp_token`) to the verifier; return a normalized `VerificationResult`.
     - Relay verifier failure results as `{ success: false, error: { step: 'verify', message } }`.
     - _Requirements: 3.1, 3.4, 4.5_

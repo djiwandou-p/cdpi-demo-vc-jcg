@@ -176,6 +176,11 @@
         "executionId": "da384101-e969-4aa0-bf7f-23fa3f8fac5f",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791422086977
+      },
+      {
+        "executionId": "da384101-e969-4aa0-bf7f-23fa3f8fac5f",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791427168617
       }
     ],
     "7.3 Implement the oid4vpClient module": [
@@ -188,6 +193,11 @@
         "executionId": "da384101-e969-4aa0-bf7f-23fa3f8fac5f",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791422087938
+      },
+      {
+        "executionId": "da384101-e969-4aa0-bf7f-23fa3f8fac5f",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791427169343
       }
     ],
     "8.1 Implement the httpApi module and server entrypoint": [
@@ -279,6 +289,13 @@
         "executionId": "38f07c5c-a1ff-420c-ba29-e5c878d55749",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791421838384
+      }
+    ],
+    "7. Implement selective disclosure and the OpenID4VP client": [
+      {
+        "executionId": "da384101-e969-4aa0-bf7f-23fa3f8fac5f",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791427169758
       }
     ]
   }
