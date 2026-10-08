@@ -227,6 +227,11 @@
         "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791428119643
+      },
+      {
+        "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791428716232
       }
     ],
     "10.1 Write the wallet Dockerfile": [
@@ -239,6 +244,11 @@
         "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791428120552
+      },
+      {
+        "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791428716996
       }
     ],
     "11. Checkpoint - Ensure wallet build and all wallet tests pass": [
@@ -246,6 +256,11 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416318140
+      },
+      {
+        "executionId": "f1414785-f7d4-4a2c-8319-76fae141da76",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791435452051
       }
     ],
     "12.1 Write the full-flow integration driver": [
@@ -253,6 +268,16 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416318376
+      },
+      {
+        "executionId": "f1414785-f7d4-4a2c-8319-76fae141da76",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791435479092
+      },
+      {
+        "executionId": "d850db58-22f1-484e-939b-8af6262d8ce5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791443965530
       }
     ],
     "13.1 Write .github/workflows/ci.yml": [
@@ -260,6 +285,21 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416318606
+      },
+      {
+        "executionId": "f1414785-f7d4-4a2c-8319-76fae141da76",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791435480034
+      },
+      {
+        "executionId": "d850db58-22f1-484e-939b-8af6262d8ce5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791443966418
+      },
+      {
+        "executionId": "bfc94330-bffc-4db6-9383-82a38f36eed2",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791500896221
       }
     ],
     "14.1 Author README.md and docs/quickstart.md": [
@@ -267,6 +307,21 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416318921
+      },
+      {
+        "executionId": "f1414785-f7d4-4a2c-8319-76fae141da76",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791435481024
+      },
+      {
+        "executionId": "d850db58-22f1-484e-939b-8af6262d8ce5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791443964635
+      },
+      {
+        "executionId": "d850db58-22f1-484e-939b-8af6262d8ce5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791443974280
       }
     ],
     "15. Final checkpoint - Ensure the full stack and all tests pass": [
@@ -323,6 +378,34 @@
         "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791428113174
+      }
+    ],
+    "9. Build the thin wallet web UI": [
+      {
+        "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791428716430
+      }
+    ],
+    "10. Containerize the wallet": [
+      {
+        "executionId": "21371206-8a4d-4348-a1cb-2ec5b2906be5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791428717160
+      }
+    ],
+    "14. Write quickstart documentation": [
+      {
+        "executionId": "d850db58-22f1-484e-939b-8af6262d8ce5",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791443974632
+      }
+    ],
+    "13. Add the minimal CI pipeline": [
+      {
+        "executionId": "bfc94330-bffc-4db6-9383-82a38f36eed2",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791500896474
       }
     ]
   }

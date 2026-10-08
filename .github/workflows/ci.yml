@@ -1,0 +1,43 @@
+# CDPI Wallet CI
+# Minimal CI: lint the primary TS codebase and validate/build the Docker Compose stack.
+# No SAST, no coverage gates (see "Minimal CI Design").
+name: CDPI Wallet CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  # Job 1 — lint (Req 7.1, 7.2, 7.3)
+  # Lint covers the primary TS codebase (services/wallet). No root eslint config.
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      # Resilient install: no package-lock.json is committed in services/wallet yet,
+      # and `npm ci` hard-fails without one. Committing a lockfile is recommended so
+      # CI can use reproducible `npm ci`.
+      - name: Install dependencies
+        working-directory: services/wallet
+        run: if [ -f package-lock.json ]; then npm ci; else npm install; fi
+      - name: Lint
+        working-directory: services/wallet
+        run: npm run lint
+
+  # Job 2 — compose-build (Req 7.4)
+  # Docker + Compose v2 are available on ubuntu-latest runners by default.
+  compose-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Validate the compose file (run from repo root — default working dir).
+      - name: Validate compose config
+        run: docker compose config
+      # Build the wallet image; issuer/verifier are pinned pulled images.
+      - name: Build compose images
+        run: docker compose build

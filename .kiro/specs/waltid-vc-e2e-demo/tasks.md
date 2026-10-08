@@ -124,43 +124,43 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Test `/wallet/offer` stored confirmation payload, `/wallet/credential` redacted summary, `/healthz` liveness, and per-step failure surfacing in error responses.
     - _Requirements: 2.3, 6.3_
 
-- [ ] 9. Build the thin wallet web UI
-  - [-] 9.1 Implement the web UI under services/wallet/public
+- [x] 9. Build the thin wallet web UI
+  - [x] 9.1 Implement the web UI under services/wallet/public
     - Offer intake by paste (textarea) and scan (QR via camera/image → decoded string), an "Accept offer" action, and a stored-credential confirmation panel driven by `GET /wallet/credential`.
     - Presentation-request intake (paste/scan), a "Present" action, and a verification-result display.
     - Show the invalid-offer error from `offerIntake` without changing stored state.
     - UI talks only to the wallet BFF.
     - _Requirements: 2.3, 2.4, 2.5_
 
-- [ ] 10. Containerize the wallet
-  - [-] 10.1 Write the wallet Dockerfile
+- [x] 10. Containerize the wallet
+  - [x] 10.1 Write the wallet Dockerfile
     - Create `services/wallet/Dockerfile` (Node base) that installs deps, builds TypeScript, serves the BFF + static UI on port 3000, and exposes `/healthz` for the Compose health check.
     - Add `services/wallet/README.md` noting build/run.
     - _Requirements: 5.4, 5.5_
 
-- [~] 11. Checkpoint - Ensure wallet build and all wallet tests pass
+- [x] 11. Checkpoint - Ensure wallet build and all wallet tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 12. Implement the happy-path integration test driver
-  - [~] 12.1 Write the full-flow integration driver
+  - [-] 12.1 Write the full-flow integration driver
     - Create `tests/integration/full-flow.test.ts` driving against a running Compose stack via REST: (1) create an Education Certificate offer on the issuer; (2) `POST /wallet/offer` and assert a stored SD-JWT VC confirmation; (3) create a verifier presentation request naming `degree`+`institution` and capture the `nonce`; (4) `POST /wallet/present`; (5) assert `success: true`, `degree` and `institution` disclosed, `grades` absent.
     - On any step error, fail the test and name the failing step using the BFF step tag.
     - _Requirements: 6.1, 6.2, 6.3, 3.1, 4.1, 4.2, 4.3, 4.4_
 
-- [ ] 13. Add the minimal CI pipeline
-  - [~] 13.1 Write .github/workflows/ci.yml
+- [x] 13. Add the minimal CI pipeline
+  - [x] 13.1 Write .github/workflows/ci.yml
     - Trigger on pull requests targeting `main`.
     - `lint` job: `actions/checkout`, `actions/setup-node` (Node 20), `npm ci`, `npm run lint` over `services/wallet` and the integration test.
     - `compose-build` job: `actions/checkout`, `docker compose build` and `docker compose config` to confirm the stack builds and the Compose file is valid.
     - _Requirements: 7.1, 7.2, 7.3, 7.4_
 
-- [ ] 14. Write quickstart documentation
-  - [~] 14.1 Author README.md and docs/quickstart.md
+- [x] 14. Write quickstart documentation
+  - [x] 14.1 Author README.md and docs/quickstart.md
     - Top-level `README.md`: steps to start the Compose stack (`docker compose up`), the end-to-end issue-store-present-verify walkthrough through the wallet web UI, and the command to run the integration test.
     - `docs/quickstart.md`: supporting notes (prerequisites, ports, troubleshooting, where config lives).
     - _Requirements: 8.1, 8.2, 8.3_
 
-- [~] 15. Final checkpoint - Ensure the full stack and all tests pass
+- [ ] 15. Final checkpoint - Ensure the full stack and all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 ## Notes

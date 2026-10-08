@@ -1,0 +1,7 @@
+{
+  "name": "cdpi-demo-vc-jcg-integration",
+  "private": true,
+  "type": "module",
+  "scripts": { "test:integration": "vitest run" },
+  "devDependencies": { "vitest": "3.2.4" }
+}
