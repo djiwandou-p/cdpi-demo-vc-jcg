@@ -141,8 +141,8 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
 - [x] 11. Checkpoint - Ensure wallet build and all wallet tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 12. Implement the happy-path integration test driver
-  - [-] 12.1 Write the full-flow integration driver
+- [x] 12. Implement the happy-path integration test driver
+  - [x] 12.1 Write the full-flow integration driver
     - Create `tests/integration/full-flow.test.ts` driving against a running Compose stack via REST: (1) create an Education Certificate offer on the issuer; (2) `POST /wallet/offer` and assert a stored SD-JWT VC confirmation; (3) create a verifier presentation request naming `degree`+`institution` and capture the `nonce`; (4) `POST /wallet/present`; (5) assert `success: true`, `degree` and `institution` disclosed, `grades` absent.
     - On any step error, fail the test and name the failing step using the BFF step tag.
     - _Requirements: 6.1, 6.2, 6.3, 3.1, 4.1, 4.2, 4.3, 4.4_
@@ -160,7 +160,7 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - `docs/quickstart.md`: supporting notes (prerequisites, ports, troubleshooting, where config lives).
     - _Requirements: 8.1, 8.2, 8.3_
 
-- [ ] 15. Final checkpoint - Ensure the full stack and all tests pass
+- [x] 15. Final checkpoint - Ensure the full stack and all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 ## Notes
