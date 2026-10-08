@@ -10,14 +10,14 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
 
 ## Tasks
 
-- [ ] 1. Scaffold the monorepo and wallet toolchain
+- [x] 1. Scaffold the monorepo and wallet toolchain
   - [x] 1.1 Create the repository skeleton
     - Create directory layout per design "Repository Layout": `services/issuer/config`, `services/verifier/config`, `services/wallet/src`, `services/wallet/public`, `services/wallet/tests`, `tests/integration`, `docs/adr`, `.github/workflows`.
     - Add top-level `.gitignore` (node_modules, dist, build artifacts, env files) and `LICENSE` placeholder.
     - Move/author `docs/adr/0001-waltid-stack-selection.md` reference stub so the ADR lives under `docs/adr`.
     - _Requirements: 5.1_
 
-  - [-] 1.2 Initialize the wallet TypeScript/Node project
+  - [x] 1.2 Initialize the wallet TypeScript/Node project
     - Create `services/wallet/package.json` with scripts: `build`, `start`, `lint`, `test`; dependencies on `waltid-identity-sdk`, an HTTP framework (e.g. express), and dev deps for TypeScript, ESLint, the test runner, and `fast-check`.
     - Add `tsconfig.json`, ESLint config, and the test runner config under `services/wallet`.
     - Create `services/wallet/src/types.ts` defining `CredentialOffer`, `StoredCredential`, `PresentationRequest`, `VerificationResult` exactly as in design "Internal Wallet Types".
@@ -34,8 +34,8 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Add `services/verifier/README.md` describing the request and policies.
     - _Requirements: 4.1, 4.2, 4.3_
 
-- [ ] 3. Author the Docker Compose stack
-  - [-] 3.1 Write docker-compose.yml with pinned, mem-limited services
+- [x] 3. Author the Docker Compose stack
+  - [x] 3.1 Write docker-compose.yml with pinned, mem-limited services
     - Define `issuer`, `verifier`, `wallet` services on the `cdpi-net` network per design "Docker Compose Topology".
     - Pin `waltid/issuer-api2` and `waltid/verifier-api2` to explicit published release tags (no `latest`/floating tags).
     - Set `mem_limit`: `1g` for issuer and verifier (JVM), `512m` for wallet (Node) — within the 512 MB–1 GB band.
@@ -47,8 +47,8 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Assert all three services are present, walt.id image tags are pinned (not `latest`), each service has a memory limit in the 512 MB–1 GB band, and the required host port mappings exist.
     - _Requirements: 5.1, 5.2, 5.3, 5.5_
 
-- [ ] 4. Implement wallet offer intake and session storage
-  - [~] 4.1 Implement the offerIntake module
+- [x] 4. Implement wallet offer intake and session storage
+  - [x] 4.1 Implement the offerIntake module
     - Create `services/wallet/src/offerIntake.ts`: normalize pasted/scanned input into a canonical `CredentialOffer` (issuer, preAuthorizedCode, credentialConfigurationIds, raw); reject malformed input with an invalid-offer error before any network call (fail fast).
     - Treat paste and scan inputs through one normalization path so they produce identical results.
     - _Requirements: 2.4, 2.5_
@@ -61,7 +61,7 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - **Property 5: Unparseable offers are rejected** (reject, surface invalid-offer error, leave stored state unchanged)
     - **Validates: Requirements 2.5**
 
-  - [~] 4.4 Implement the sessionStore module
+  - [x] 4.4 Implement the sessionStore module
     - Create `services/wallet/src/sessionStore.ts`: in-memory, session-scoped storage of the raw SD-JWT VC keyed by session id (`StoredCredential`); no persistence beyond the session; provide store and retrieve operations.
     - _Requirements: 2.2_
 
@@ -70,11 +70,11 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - **Validates: Requirements 2.2**
 
 - [ ] 5. Implement holder key handling and the OpenID4VCI client
-  - [~] 5.1 Implement the holderKeys module
+  - [x] 5.1 Implement the holderKeys module
     - Create `services/wallet/src/holderKeys.ts`: use `waltid-identity-sdk` to generate the holder JWK and `did:key`, and produce the key-binding proof used in the credential request and later in presentation.
     - _Requirements: 1.4, 2.1_
 
-  - [~] 5.2 Implement the oid4vciClient module
+  - [-] 5.2 Implement the oid4vciClient module
     - Create `services/wallet/src/oid4vciClient.ts`: drive the OpenID4VCI pre-authorized code flow against the issuer (token request → credential request with holder proof), parse the returned SD-JWT VC into a `StoredCredential`.
     - Build the issuance claim set so it carries all four Education Certificate attributes.
     - Map issuer OpenID4VCI error responses (e.g. unsupported credential type) to a failure tagged with the `token`/`credential` step.

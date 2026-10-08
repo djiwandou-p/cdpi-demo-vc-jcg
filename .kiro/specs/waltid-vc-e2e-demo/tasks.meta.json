@@ -28,6 +28,11 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416661345
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418301881
       }
     ],
     "2.1 Author the Issuer Education Certificate profile and did:key": [
@@ -74,6 +79,11 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416661983
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418300790
       }
     ],
     "4.1 Implement the offerIntake module": [
@@ -81,6 +91,16 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416315802
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418307177
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418569285
       }
     ],
     "4.4 Implement the sessionStore module": [
@@ -88,6 +108,16 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416316107
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418308081
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418570965
       }
     ],
     "5.1 Implement the holderKeys module": [
@@ -95,6 +125,16 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416316367
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418309015
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418567914
       }
     ],
     "5.2 Implement the oid4vciClient module": [
@@ -102,6 +142,11 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416316652
+      },
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418585820
       }
     ],
     "6. Checkpoint - Ensure intake, storage, keys, and issuance client tests pass": [
@@ -186,6 +231,27 @@
         "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
         "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
         "timestamp": 1791416656169
+      }
+    ],
+    "3. Author the Docker Compose stack": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418300969
+      }
+    ],
+    "1. Scaffold the monorepo and wallet toolchain": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418302026
+      }
+    ],
+    "4. Implement wallet offer intake and session storage": [
+      {
+        "executionId": "25ed8a7d-2243-49ab-a822-06310c8a1918",
+        "chatSessionId": "sess_622fd781-609c-4343-b1f8-dc481a56203a",
+        "timestamp": 1791418571335
       }
     ]
   }
