@@ -96,7 +96,7 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Create `services/wallet/src/disclosureSelector.ts`: given a stored Education Certificate SD-JWT VC and a `PresentationRequest`, select the disclosures to reveal (`degree`, `institution`) and drop the rest (`grades`).
     - _Requirements: 3.2, 3.3_
 
-  - [-]* 7.2 Write property test for selective disclosure
+  - [x]* 7.2 Write property test for selective disclosure
     - **Property 3: Selective disclosure reveals degree and institution and withholds grades**
     - **Validates: Requirements 3.2, 3.3**
 
@@ -105,11 +105,11 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Relay verifier failure results as `{ success: false, error: { step: 'verify', message } }`.
     - _Requirements: 3.1, 3.4, 4.5_
 
-  - [-]* 7.4 Write property test for challenge binding
+  - [x]* 7.4 Write property test for challenge binding
     - **Property 6: Presentation binds to the request challenge** (presentation bound to the exact supplied nonce)
     - **Validates: Requirements 3.4**
 
-  - [-]* 7.5 Write unit test for failed-signature result relay
+  - [x]* 7.5 Write unit test for failed-signature result relay
     - Assert a verifier signature-validation failure surfaces as a failed result naming the validation error/step.
     - _Requirements: 4.5_
 
@@ -120,7 +120,7 @@ Follow the design's data model (`CredentialOffer`, `StoredCredential`, `Presenta
     - Read `ISSUER_BASE_URL` / `VERIFIER_BASE_URL` from the environment.
     - _Requirements: 2.1, 2.3, 3.1_
 
-  - [-]* 8.2 Write unit tests for the HTTP API handlers
+  - [x]* 8.2 Write unit tests for the HTTP API handlers
     - Test `/wallet/offer` stored confirmation payload, `/wallet/credential` redacted summary, `/healthz` liveness, and per-step failure surfacing in error responses.
     - _Requirements: 2.3, 6.3_
 
